@@ -341,6 +341,9 @@ var GiftedMessenger = React.createClass({
       rowID = this._data.length - 1;
     }
     this.setState({
+        dataSource: this.state.dataSource.cloneWithRows([]),
+    });
+    this.setState({
       dataSource: this.state.dataSource.cloneWithRows(this._data, this._rowIds),
     });
     return rowID;
@@ -360,6 +363,9 @@ var GiftedMessenger = React.createClass({
       rowID = this._data.length - 1;
     }
 
+    this.setState({
+        dataSource: this.state.dataSource.cloneWithRows([]),
+    });
     this.setState({
       dataSource: this.state.dataSource.cloneWithRows(this._data, this._rowIds),
     });
@@ -381,6 +387,9 @@ var GiftedMessenger = React.createClass({
   },
 
   refreshRows() {
+      this.setState({
+          dataSource: this.state.dataSource.cloneWithRows([]),
+      });
     this.setState({
       dataSource: this.state.dataSource.cloneWithRows(this._data, this._rowIds),
     });
