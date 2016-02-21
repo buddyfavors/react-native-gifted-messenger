@@ -444,6 +444,7 @@ var GiftedMessenger = React.createClass({
             return <View onLayout={(event)=>{
               var layout = event.nativeEvent.layout;
               this.footerY = layout.y;
+              this.scrollToBottom();
             }}></View>
           }}
 
